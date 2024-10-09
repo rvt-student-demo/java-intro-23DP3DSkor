@@ -140,31 +140,53 @@ public class App
         //     System.out.println(x);
         // }
         // PART 1, 2, 3, 4, 5
+        // Scanner scanner = new Scanner(System.in);
+        // System.out.println("Give a number: ");
+        // int summa = 0;
+        // int result = 0;
+        // int odd = 0;
+        // int even = 0;
+        // while(true){
+        //     int number = Integer.valueOf(scanner.nextLine());
+        //     if (number == -1) {
+        //         System.out.println("Thx! Bye!");
+        //         System.out.println("Sum of the numbers: " + summa);
+        //         System.out.println("Numbers: " + result);
+        //         System.out.println("Average: " + (double)summa/result);
+        //         System.err.println("Even: " + even);
+        //         System.out.println("Odd: " + odd);
+        //         break;
+        //     }
+        //     summa = summa + number;
+        //     result = result + 1;
+        //     if(number % 2 == 0){
+        //         even++;
+        //     }
+        //     else{
+        //         odd++;
+        //     }
+        // }
+        // Scanner scanner = new Scanner(System.in);
+        // System.out.println("How many times?: ");
+        // String word = String.valueOf(scanner.nextLine());
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Give a number: ");
-        int summa = 0;
-        int result = 0;
-        int odd = 0;
-        int even = 0;
-        while(true){
-            int number = Integer.valueOf(scanner.nextLine());
-            if (number == -1) {
-                System.out.println("Thx! Bye!");
-                System.out.println("Sum of the numbers: " + summa);
-                System.out.println("Numbers: " + result);
-                System.out.println("Average: " + (double)summa/result);
-                System.err.println("Even: " + even);
-                System.out.println("Odd: " + odd);
-                break;
-            }
-            summa = summa + number;
-            result = result + 1;
-            if(number % 2 == 0){
-                even++;
-            }
-            else{
-                odd++;
-            }
-        }
+        System.out.println("Write beginning number, please: ");
+        int beg = Integer.valueOf(scanner.nextLine());
+        System.out.println("Write end number, please: ");
+        int ends = Integer.valueOf(scanner.nextLine());
+
+        divisibleByThreeInRange(beg, ends);
     }
+
+
+    public static void divisibleByThreeInRange(int beginning, int end){
+            while(beginning <= end){
+                if(beginning % 3 == 0){
+                System.out.println(beginning);
+                }
+            beginning++;
+            }
+    }
+    
 }
+
