@@ -1,7 +1,7 @@
 package lv.rvt;
-
 import java.util.Scanner;
-
+import java.util.*;
+import java.util.ArrayList;
 public class App 
 {
     public static void main( String[] args )
@@ -169,24 +169,65 @@ public class App
         // Scanner scanner = new Scanner(System.in);
         // System.out.println("How many times?: ");
         // String word = String.valueOf(scanner.nextLine());
+    //     Scanner scanner = new Scanner(System.in);
+    //     System.out.println("Write beginning number, please: ");
+    //     int beg = Integer.valueOf(scanner.nextLine());
+    //     System.out.println("Write end number, please: ");
+    //     int ends = Integer.valueOf(scanner.nextLine());
+
+    //     divisibleByThreeInRange(beg, ends);
+    // }
+
+
+    // public static void divisibleByThreeInRange(int beginning, int end){
+    //         while(beginning <= end){
+    //             if(beginning % 3 == 0){
+    //             System.out.println(beginning);
+    //             }
+    //         beginning++;
+    //         }
+        // Stars.printStars(4);
+
+        // System.out.println();
+
+        // Stars.printSqure(4);
+
+        // System.out.println();
+
+        // Stars.printRectangle(17, 3);
+
+        // System.out.println();
+
+        // Stars.printTriangle(4);
+
+        // ArrayList<String> wordList = new ArrayList<>();
+
+        // wordList.add("Tom");
+        // wordList.add("Emma");
+        // wordList.add("Alex");
+        // wordList.add("Mary");
+
+        // System.out.println(wordList.get(3));
+
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Write beginning number, please: ");
-        int beg = Integer.valueOf(scanner.nextLine());
-        System.out.println("Write end number, please: ");
-        int ends = Integer.valueOf(scanner.nextLine());
-
-        divisibleByThreeInRange(beg, ends);
-    }
-
-
-    public static void divisibleByThreeInRange(int beginning, int end){
-            while(beginning <= end){
-                if(beginning % 3 == 0){
-                System.out.println(beginning);
-                }
-            beginning++;
+        ArrayList<Integer> numbers = new ArrayList<>();
+        while (true){
+            System.out.println("ievada skaitlis: ");
+            int input = scanner.nextInt();
+            if(input == 0){
+                break;
             }
+            numbers.add(input);
+        }
+        if(numbers.size() >= 3){
+            int sum = numbers.get(1) + numbers.get(2);
+            System.out.println("Tas ir summa otra un treša skaitla: " + sum);
+
+        }
+        else{
+            System.out.println("ne strada");
+        }
     }
-    
+
 }
 
