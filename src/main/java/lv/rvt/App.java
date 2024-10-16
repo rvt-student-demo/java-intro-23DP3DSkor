@@ -211,6 +211,7 @@ public class App
 
         Scanner scanner = new Scanner(System.in);
         ArrayList<Integer> numbers = new ArrayList<>();
+        int sum = 0;
         while (true){
             System.out.println("ievada skaitlis: ");
             int input = scanner.nextInt();
@@ -218,16 +219,9 @@ public class App
                 break;
             }
             numbers.add(input);
-        }
-        if(numbers.size() >= 3){
-            int sum = numbers.get(1) + numbers.get(2);
-            System.out.println("Tas ir summa otra un treša skaitla: " + sum);
-
-        }
-        else{
-            System.out.println("ne strada");
-        }
+            sum += input;
     }
-
+    System.out.println("Tas ir summa visas skaitlis no saraksta: " + sum);
+    }
 }
 
