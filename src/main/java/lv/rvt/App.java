@@ -231,19 +231,39 @@ public class App
         // int sum = number.get(1) + number.get(2);
         // System.out.println("Second and Third element sum: "+ sum);
 
+        // Scanner scanner = new Scanner(System.in);
+        // ArrayList<String> names = new ArrayList<>();
+        // while(true){
+        //     System.out.println("Enter name: ");
+        //     String input = scanner.nextLine();
+        //     names.add(input);
+        //     if(input.isEmpty()){
+        //         break;
+        //     }
+        // }
+        // int value = names.size();
+        // int value1 = value - 1;
+        // System.out.println("Total names: " + value1);
+
         Scanner scanner = new Scanner(System.in);
-        ArrayList<String> names = new ArrayList<>();
+        ArrayList<Integer> numbers = new ArrayList<>();
         while(true){
-            System.out.println("Enter name: ");
-            String input = scanner.nextLine();
-            names.add(input);
-            if(input.isEmpty()){
+            System.out.println("Enter numbers: ");
+            int input = Integer.valueOf(scanner.nextLine());
+            if(input == -1){
                 break;
             }
+            numbers.add(input);
         }
-        int value = names.size();
-        int value1 = value - 1;
-        System.out.println("Total names: " + value1);
+        System.out.println("Enter first index: ");
+        int firstIndex = Integer.valueOf(scanner.nextLine());
+        System.out.println("Enter second index: ");
+        int secondIndex = Integer.valueOf(scanner.nextLine());
+        System.out.println("Diapozone: ");
+        for (int i = firstIndex; i <= secondIndex; i++){
+            System.out.println(numbers.get(i));
+        }
+
     }
 }
 
