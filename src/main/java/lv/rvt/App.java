@@ -200,28 +200,23 @@ public class App
 
         // Stars.printTriangle(4);
 
-        // ArrayList<String> wordList = new ArrayList<>();
 
-        // wordList.add("Tom");
-        // wordList.add("Emma");
-        // wordList.add("Alex");
-        // wordList.add("Mary");
-
-        // System.out.println(wordList.get(3));
+        // ArrayList<String> wordlist = new ArrayList<>();
+        // wordlist.add("First");
+        // wordlist.add("Second");
+        // wordlist.add("Third");
+        // System.out.println(wordlist.get(1));
 
         Scanner scanner = new Scanner(System.in);
-        ArrayList<Integer> numbers = new ArrayList<>();
-        int sum = 0;
-        while (true){
-            System.out.println("ievada skaitlis: ");
-            int input = scanner.nextInt();
-            if(input == 0){
-                break;
-            }
-            numbers.add(input);
-            sum += input;
-    }
-    System.out.println("Tas ir summa visas skaitlis no saraksta: " + sum);
+        ArrayList<String> wordList = new ArrayList<>();
+        int count = 0;
+        while(count < 4){
+            System.out.println("Enter name: ");
+            String input = scanner.nextLine();
+            wordList.add(input);
+            count++;
+        }
+        System.out.println("Third element: "+ wordList.get(2));
     }
 }
 
