@@ -207,16 +207,29 @@ public class App
         // wordlist.add("Third");
         // System.out.println(wordlist.get(1));
 
+        // Scanner scanner = new Scanner(System.in);
+        // ArrayList<String> wordList = new ArrayList<>();
+        // int count = 0;
+        // while(count < 4){
+        //     System.out.println("Enter name: ");
+        //     String input = scanner.nextLine();
+        //     wordList.add(input);
+        //     count++;
+        // }
+        // System.out.println("Third element: "+ wordList.get(2));
+
         Scanner scanner = new Scanner(System.in);
-        ArrayList<String> wordList = new ArrayList<>();
-        int count = 0;
-        while(count < 4){
-            System.out.println("Enter name: ");
-            String input = scanner.nextLine();
-            wordList.add(input);
-            count++;
+        ArrayList<Integer> number = new ArrayList<>();
+        while(true){
+            System.out.println("Enter number: ");
+            Integer input = Integer.valueOf(scanner.nextLine());
+            number.add(input);
+            if(input == 0){
+                break;
+            }
         }
-        System.out.println("Third element: "+ wordList.get(2));
+        int sum = number.get(1) + number.get(2);
+        System.out.println("Second and Third element sum: "+ sum);
     }
 }
 
