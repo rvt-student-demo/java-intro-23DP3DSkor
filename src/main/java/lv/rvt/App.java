@@ -218,18 +218,32 @@ public class App
         // }
         // System.out.println("Third element: "+ wordList.get(2));
 
+        // Scanner scanner = new Scanner(System.in);
+        // ArrayList<Integer> number = new ArrayList<>();
+        // while(true){
+        //     System.out.println("Enter number: ");
+        //     Integer input = Integer.valueOf(scanner.nextLine());
+        //     number.add(input);
+        //     if(input == 0){
+        //         break;
+        //     }
+        // }
+        // int sum = number.get(1) + number.get(2);
+        // System.out.println("Second and Third element sum: "+ sum);
+
         Scanner scanner = new Scanner(System.in);
-        ArrayList<Integer> number = new ArrayList<>();
+        ArrayList<String> names = new ArrayList<>();
         while(true){
-            System.out.println("Enter number: ");
-            Integer input = Integer.valueOf(scanner.nextLine());
-            number.add(input);
-            if(input == 0){
+            System.out.println("Enter name: ");
+            String input = scanner.nextLine();
+            names.add(input);
+            if(input.isEmpty()){
                 break;
             }
         }
-        int sum = number.get(1) + number.get(2);
-        System.out.println("Second and Third element sum: "+ sum);
+        int value = names.size();
+        int value1 = value - 1;
+        System.out.println("Total names: " + value1);
     }
 }
 
