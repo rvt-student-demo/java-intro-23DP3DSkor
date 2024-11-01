@@ -1,5 +1,7 @@
 package lv.rvt;
 
+import java.util.ArrayList;
+
 public class Stars{
 //     public static void printStars(int number){
 //         for( int i = 0; i < number; i++){
@@ -39,6 +41,5 @@ public class Stars{
     //         System.out.println();
             
     //     }
-    }
 }
 
