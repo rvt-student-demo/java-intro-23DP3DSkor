@@ -2,6 +2,7 @@ package lv.rvt;
 import java.util.Scanner;
 import java.util.*;
 import java.util.ArrayList;
+import java.util.Random;
 public class App 
 {
     public static void main( String[] args )
@@ -245,25 +246,114 @@ public class App
         // int value1 = value - 1;
         // System.out.println("Total names: " + value1);
 
-        Scanner scanner = new Scanner(System.in);
-        ArrayList<Integer> numbers = new ArrayList<>();
-        while(true){
-            System.out.println("Enter numbers: ");
-            int input = Integer.valueOf(scanner.nextLine());
-            if(input == -1){
-                break;
-            }
-            numbers.add(input);
+        // Scanner scanner = new Scanner(System.in);
+        // ArrayList<Integer> numbers = new ArrayList<>();
+        // while(true){
+        //     System.out.println("Enter numbers: ");
+        //     int input = Integer.valueOf(scanner.nextLine());
+        //     if(input == -1){
+        //         break;
+        //     }
+        //     numbers.add(input);
+        // }
+        // System.out.println("Enter first index: ");
+        // int firstIndex = Integer.valueOf(scanner.nextLine());
+        // System.out.println("Enter second index: ");
+        // int secondIndex = Integer.valueOf(scanner.nextLine());
+        // System.out.println("Diapozone: ");
+        // for (int i = firstIndex; i <= secondIndex; i++){
+        //     System.out.println(numbers.get(i));
+        // }
+
+    //     ArrayList<Integer> numbers = new ArrayList<>();
+    //     numbers.add(3);
+    //     numbers.add(2);
+    //     numbers.add(6);
+    //     numbers.add(-1);
+    //     numbers.add(5);
+    //     numbers.add(1);
+
+    //     System.out.println("The numbers in the range [0, 5]");
+    //     printNumbersInRange(numbers, 0, 5);
+
+    //     System.out.println("The numbers in the range [3, 10]");
+    //     printNumbersInRange(numbers, 3, 10);
+
+    // }
+    // public static void printNumbersInRange(ArrayList<Integer> numbers, int lower, int upper) {
+    //     for (int number : numbers) {
+    //         if (number >= lower && number <= upper){
+    //             System.out.println(number);
+    //         }
+    //     }
+    // Random random = new Random();
+    // int[]arrayNumber = new int[10];
+    // for(int i = 0; i < arrayNumber.length; i++){
+    //     arrayNumber[i] = random.nextInt(10);
+    // }
+    // int min = arrayNumber[0];
+    // int max = arrayNumber[0];
+    // int sum = 0;
+    // for(int num : arrayNumber){
+    //     if(num < min){
+    //         min = num;
+    //     }
+    //     if(num > max){
+    //         max = num;
+    //     }
+    //     sum += num;
+    // }
+    // double average = (double) sum/arrayNumber.length;
+    // for (int num : arrayNumber){
+    //     System.out.println(num);
+    // }
+    // System.out.println("Max number of massiv: " + max);
+    // System.out.println("Min number of massiv: " + min);
+    // System.out.println("Average of massiv: " + average);
+
+    // int a[] = {1, 4, 5, 8, 0, 2, 7, 3, 6, 9};
+    // int length = 10;
+    // for(int i = 0; i < length; i++);{
+    //     for(int j = 0; j < length - 1; j++ ){
+    //         if(a[j] > a[j +1]){
+    //             int temp = a[j];
+    //             a[j] = a[j + 1];
+    //             a[j + 1] = temp;
+    //         }
+    //     }
+    // }
+    // System.out.println();
+
+    Scanner scanner = new Scanner(System.in);
+    ArrayList<String> names = new ArrayList<>();
+    ArrayList<Integer> birthyears = new ArrayList<>();
+    while (true){
+        System.out.println("Enter your name and birthday: ");
+        String input = scanner.nextLine();
+        if(input.isEmpty()){
+            break;
         }
-        System.out.println("Enter first index: ");
-        int firstIndex = Integer.valueOf(scanner.nextLine());
-        System.out.println("Enter second index: ");
-        int secondIndex = Integer.valueOf(scanner.nextLine());
-        System.out.println("Diapozone: ");
-        for (int i = firstIndex; i <= secondIndex; i++){
-            System.out.println(numbers.get(i));
-        }
+        String[] parts = input.split(",");
+        String name = parts[0].trim();
+        int birthyear = Integer.parseInt(parts[1]);
+
+        names.add(name);
+        birthyears.add(birthyear);
 
     }
+    String longestName = "";
+    for (String name : names){
+        if(name.length() > longestName.length()){
+            longestName = name;
+        }
+    }
+    int sum = 0;
+    for (int year : birthyears){
+        sum += year;
+    }
+    double averageBirthYear = (double)sum / birthyears.size();
+    System.out.println("longest name: " + longestName);
+    System.out.println("Average birth year: " + averageBirthYear);
+}
 }
 
