@@ -324,36 +324,58 @@ public class App
     // }
     // System.out.println();
 
-    Scanner scanner = new Scanner(System.in);
-    ArrayList<String> names = new ArrayList<>();
-    ArrayList<Integer> birthyears = new ArrayList<>();
-    while (true){
-        System.out.println("Enter your name and birthday: ");
-        String input = scanner.nextLine();
-        if(input.isEmpty()){
-            break;
-        }
-        String[] parts = input.split(",");
-        String name = parts[0].trim();
-        int birthyear = Integer.parseInt(parts[1]);
+    // Scanner scanner = new Scanner(System.in);
+    // ArrayList<String> names = new ArrayList<>();
+    // ArrayList<Integer> birthyears = new ArrayList<>();
+    // while (true){
+    //     System.out.println("Enter your name and birthday: ");
+    //     String input = scanner.nextLine();
+    //     if(input.isEmpty()){
+    //         break;
+    //     }
+    //     String[] parts = input.split(",");
+    //     String name = parts[0].trim();
+    //     int birthyear = Integer.parseInt(parts[1]);
 
-        names.add(name);
-        birthyears.add(birthyear);
+    //     names.add(name);
+    //     birthyears.add(birthyear);
 
-    }
-    String longestName = "";
-    for (String name : names){
-        if(name.length() > longestName.length()){
-            longestName = name;
+    // }
+    // String longestName = "";
+    // for (String name : names){
+    //     if(name.length() > longestName.length()){
+    //         longestName = name;
+    //     }
+    // }
+    // int sum = 0;
+    // for (int year : birthyears){
+    //     sum += year;
+    // }
+    // double averageBirthYear = (double)sum / birthyears.size();
+    // System.out.println("longest name: " + longestName);
+    // System.out.println("Average birth year: " + averageBirthYear);
+
+}
+    public class Account{
+        private double balance;
+        private String owner;
+        public Account(String owner, double balance){
+            this.balance = balance;
+            this.owner = owner;
         }
-    }
-    int sum = 0;
-    for (int year : birthyears){
-        sum += year;
-    }
-    double averageBirthYear = (double)sum / birthyears.size();
-    System.out.println("longest name: " + longestName);
-    System.out.println("Average birth year: " + averageBirthYear);
+        public void deposit(double amount){
+            this.balance = this.balance + amount;
+        }
+        public void withdraw(double amount){
+            this.balance = this.balance - amount;
+        }
+        public double balance(){
+            return this.balance;
+        }
+        @Override
+        public String toString(){
+            return this.owner + "balance: " + this.balance; 
+        }
 }
 }
 
